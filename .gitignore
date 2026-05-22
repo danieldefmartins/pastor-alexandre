@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Large video files (use CDN instead)
+public/videos/israel/WhatsApp Video 2026-05-22 at 07.05.22.mp4
