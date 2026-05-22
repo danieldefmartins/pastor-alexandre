@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s | Pastor Alexandre Mendes",
   },
   description:
-    "Pastor, pregador internacional, cantor e guia de viagens a Israel há 26 anos. Fundador do Templo dos Milagres em Malden, MA. Conheça a Terra Santa.",
+    "Pastor, pregador internacional, cantor e especialista em Israel há quase 30 anos. Fundador do Templo dos Milagres em Malden, MA. Conheça a Terra Santa.",
   keywords: [
     "Pastor Alexandre Mendes",
     "viagem Israel",
@@ -34,11 +34,26 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Pastor Alexandre Mendes",
     description:
-      "Pastor, pregador internacional e guia de Israel há 26 anos.",
+      "Pastor, pregador internacional e especialista em Israel há quase 30 anos. Fundador do Templo dos Milagres.",
     url: "https://pastoralexandre.com",
     siteName: "Pastor Alexandre Mendes",
     locale: "pt_BR",
     type: "website",
+    images: [
+      {
+        url: "/images/pastor-alexandre-portrait.jpg",
+        width: 800,
+        height: 800,
+        alt: "Pastor Alexandre Mendes",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pastor Alexandre Mendes",
+    description:
+      "Pastor, pregador internacional e especialista em Israel há quase 30 anos.",
+    images: ["/images/pastor-alexandre-portrait.jpg"],
   },
 };
 
