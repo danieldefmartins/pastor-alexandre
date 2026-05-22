@@ -25,7 +25,7 @@ export default function Header() {
 
       <nav className="bg-primary/95 backdrop-blur-md border-b border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 lg:h-20">
+          <div className="flex items-center justify-between h-20 lg:h-20">
             {/* Mobile toggle (left side on mobile) */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
@@ -47,9 +47,9 @@ export default function Header() {
               <Image
                 src="/images/pastor-alexandre-headshot.jpg"
                 alt="Pastor Alexandre"
-                width={56}
-                height={56}
-                className="w-14 h-14 lg:w-11 lg:h-11 rounded-full object-cover border-2 border-accent shadow-lg lg:shadow-none"
+                width={112}
+                height={112}
+                className="w-[4.5rem] h-[4.5rem] lg:w-14 lg:h-14 rounded-full object-cover border-[3px] border-accent shadow-xl lg:shadow-md ring-2 ring-accent/20"
               />
               <div className="hidden lg:block">
                 <p className="text-white font-bold text-base lg:text-lg tracking-tight leading-none">
