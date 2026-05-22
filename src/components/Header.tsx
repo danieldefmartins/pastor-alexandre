@@ -25,44 +25,25 @@ export default function Header() {
 
       <nav className="bg-primary/95 backdrop-blur-md border-b border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20 lg:h-20">
-            {/* Mobile toggle (left side on mobile) */}
-            <button
-              onClick={() => setMobileOpen(!mobileOpen)}
-              className="lg:hidden p-2 text-white/80"
-              aria-label="Menu"
-            >
-              {mobileOpen ? (
-                <X className="w-6 h-6" />
-              ) : (
-                <Menu className="w-6 h-6" />
-              )}
-            </button>
-
-            {/* Logo — centered on mobile, left on desktop */}
-            <Link
-              href="/"
-              className="flex items-center gap-3 group lg:order-first absolute left-1/2 -translate-x-1/2 lg:relative lg:left-0 lg:translate-x-0"
-            >
+          <div className="flex items-center justify-between h-16 lg:h-20">
+            {/* Logo — left aligned on all sizes */}
+            <Link href="/" className="flex items-center gap-3 group">
               <Image
                 src="/images/pastor-alexandre-headshot.jpg"
                 alt="Pastor Alexandre"
-                width={112}
-                height={112}
-                className="w-[4.5rem] h-[4.5rem] lg:w-14 lg:h-14 rounded-full object-cover border-[3px] border-accent shadow-xl lg:shadow-md ring-2 ring-accent/20"
+                width={56}
+                height={56}
+                className="w-12 h-12 lg:w-14 lg:h-14 rounded-full object-cover border-2 border-accent shadow-md"
               />
-              <div className="hidden lg:block">
-                <p className="text-white font-bold text-base lg:text-lg tracking-tight leading-none">
+              <div>
+                <p className="text-white font-bold text-sm sm:text-base lg:text-lg tracking-tight leading-none">
                   Pastor Alexandre
                 </p>
-                <p className="text-accent text-[10px] lg:text-xs tracking-[0.2em] uppercase">
+                <p className="text-accent text-[9px] sm:text-[10px] lg:text-xs tracking-[0.2em] uppercase">
                   Mendes
                 </p>
               </div>
             </Link>
-
-            {/* Spacer for mobile (keeps logo centered) */}
-            <div className="w-10 lg:hidden" />
 
             {/* Desktop nav */}
             <div className="hidden lg:flex items-center gap-1">
@@ -90,6 +71,19 @@ export default function Header() {
                 Viagem a Israel
               </Link>
             </div>
+
+            {/* Mobile toggle */}
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="lg:hidden p-2 text-white/80"
+              aria-label="Menu"
+            >
+              {mobileOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
+            </button>
 
           </div>
         </div>
