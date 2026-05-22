@@ -26,16 +26,32 @@ export default function Header() {
       <nav className="bg-primary/95 backdrop-blur-md border-b border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
-            {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 group">
+            {/* Mobile toggle (left side on mobile) */}
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="lg:hidden p-2 text-white/80"
+              aria-label="Menu"
+            >
+              {mobileOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
+            </button>
+
+            {/* Logo — centered on mobile, left on desktop */}
+            <Link
+              href="/"
+              className="flex items-center gap-3 group lg:order-first absolute left-1/2 -translate-x-1/2 lg:relative lg:left-0 lg:translate-x-0"
+            >
               <Image
                 src="/images/pastor-alexandre-headshot.jpg"
                 alt="Pastor Alexandre"
-                width={44}
-                height={44}
-                className="w-10 h-10 lg:w-11 lg:h-11 rounded-full object-cover border-2 border-accent"
+                width={56}
+                height={56}
+                className="w-14 h-14 lg:w-11 lg:h-11 rounded-full object-cover border-2 border-accent shadow-lg lg:shadow-none"
               />
-              <div>
+              <div className="hidden lg:block">
                 <p className="text-white font-bold text-base lg:text-lg tracking-tight leading-none">
                   Pastor Alexandre
                 </p>
@@ -44,6 +60,9 @@ export default function Header() {
                 </p>
               </div>
             </Link>
+
+            {/* Spacer for mobile (keeps logo centered) */}
+            <div className="w-10 lg:hidden" />
 
             {/* Desktop nav */}
             <div className="hidden lg:flex items-center gap-1">
@@ -72,18 +91,6 @@ export default function Header() {
               </Link>
             </div>
 
-            {/* Mobile toggle */}
-            <button
-              onClick={() => setMobileOpen(!mobileOpen)}
-              className="lg:hidden p-2 text-white/80"
-              aria-label="Menu"
-            >
-              {mobileOpen ? (
-                <X className="w-6 h-6" />
-              ) : (
-                <Menu className="w-6 h-6" />
-              )}
-            </button>
           </div>
         </div>
 
