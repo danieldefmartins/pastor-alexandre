@@ -147,10 +147,10 @@ export default function Home() {
             </div>
 
             <div className="order-1 lg:order-2 relative">
-              <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-primary/10 to-accent/10">
+              <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/israel/galilee-teaching-2.jpg"
-                  alt="Pastor Alexandre ensinando"
+                  src="/images/pastor-alexandre-portrait.jpg"
+                  alt="Pastor Alexandre Mendes"
                   fill
                   className="object-cover"
                 />
@@ -400,11 +400,13 @@ export default function Home() {
       <section className="py-16 sm:py-20 bg-cream">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl bg-gradient-to-br from-accent/10 to-primary/10 flex items-center justify-center">
-              <div className="text-center">
-                <Heart className="w-16 h-16 text-accent/30 mx-auto mb-4" />
-                <p className="text-stone-400 text-sm">Foto da família aqui</p>
-              </div>
+            <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl relative">
+              <Image
+                src="/images/pastor-alexandre-headshot.jpg"
+                alt="Pastor Alexandre Mendes"
+                fill
+                className="object-cover"
+              />
             </div>
 
             <div>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, MapPin } from "lucide-react";
 
 function InstagramIcon({ className }: { className?: string }) {
@@ -69,11 +70,13 @@ export default function Footer() {
           {/* Brand column */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 border-2 border-accent rounded-full flex items-center justify-center">
-                <span className="text-accent font-bold text-lg font-display">
-                  A
-                </span>
-              </div>
+              <Image
+                src="/images/pastor-alexandre-headshot.jpg"
+                alt="Pastor Alexandre"
+                width={40}
+                height={40}
+                className="w-10 h-10 rounded-full object-cover border-2 border-accent"
+              />
               <div>
                 <p className="font-bold text-lg tracking-tight leading-none">
                   Pastor Alexandre

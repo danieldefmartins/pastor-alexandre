@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, ChevronDown, Play } from "lucide-react";
 
 const navLinks = [
@@ -27,11 +28,13 @@ export default function Header() {
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 group">
-              <div className="w-10 h-10 lg:w-11 lg:h-11 border-2 border-accent rounded-full flex items-center justify-center group-hover:bg-accent/10 transition-colors">
-                <span className="text-accent font-bold text-lg font-display">
-                  A
-                </span>
-              </div>
+              <Image
+                src="/images/pastor-alexandre-headshot.jpg"
+                alt="Pastor Alexandre"
+                width={44}
+                height={44}
+                className="w-10 h-10 lg:w-11 lg:h-11 rounded-full object-cover border-2 border-accent"
+              />
               <div>
                 <p className="text-white font-bold text-base lg:text-lg tracking-tight leading-none">
                   Pastor Alexandre
