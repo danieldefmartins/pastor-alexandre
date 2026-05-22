@@ -25,15 +25,15 @@ export default function Header() {
 
       <nav className="bg-primary/95 backdrop-blur-md border-b border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 lg:h-20">
+          <div className="flex items-center justify-between h-20 sm:h-22 lg:h-20">
             {/* Logo — left aligned on all sizes */}
             <Link href="/" className="flex items-center gap-3 group">
               <Image
                 src="/images/pastor-alexandre-headshot.jpg"
                 alt="Pastor Alexandre"
-                width={56}
-                height={56}
-                className="w-12 h-12 lg:w-14 lg:h-14 rounded-full object-cover border-2 border-accent shadow-md"
+                width={80}
+                height={80}
+                className="w-16 h-16 sm:w-[4.5rem] sm:h-[4.5rem] lg:w-14 lg:h-14 rounded-full object-cover border-[3px] border-accent shadow-lg ring-2 ring-accent/15"
               />
               <div>
                 <p className="text-white font-bold text-sm sm:text-base lg:text-lg tracking-tight leading-none">
