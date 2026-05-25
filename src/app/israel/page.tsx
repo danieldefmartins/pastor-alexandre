@@ -202,39 +202,46 @@ function FAQItem({
 export default function IsraelPage() {
   return (
     <>
-      {/* ==================== 1. HERO — FULL SCREEN VIDEO ==================== */}
-      <section className="relative min-h-screen bg-black overflow-hidden">
-        {/* Video background — absolute to fill entire screen */}
+      {/* ==================== 1. HERO — CINEMATIC FULL SCREEN ==================== */}
+      <section className="relative h-screen bg-black overflow-hidden">
+        {/* Video fills entire viewport */}
         <video
           autoPlay
           muted
           loop
           playsInline
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover opacity-80"
         >
           <source src="/videos/israel-clip-1.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent" />
 
-        {/* Content anchored to bottom */}
-        <div className="relative flex flex-col justify-end min-h-screen px-6 sm:px-8 lg:px-12 pb-16 sm:pb-24">
-          <div className="max-w-7xl mx-auto w-full">
-            <div className="max-w-3xl">
-              <p className="text-accent text-[10px] sm:text-xs font-semibold tracking-[0.3em] uppercase mb-4 sm:mb-6 drop-shadow-lg">
-                Israel com Pastor Alexandre Mendes
-              </p>
+        {/* Subtle bottom gradient only — let the video breathe */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
 
-              <h1 className="text-4xl sm:text-6xl lg:text-[6rem] font-extrabold leading-[0.9] tracking-tight text-white font-display drop-shadow-2xl">
-                Pise Onde
-                <br />
-                <span className="text-accent">Jesus Pisou</span>
-              </h1>
+        {/* Content at the very bottom — minimal, elegant */}
+        <div className="absolute bottom-0 left-0 right-0 z-10">
+          <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pb-10 sm:pb-16">
+            <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
+              {/* Left — Title */}
+              <div>
+                <div className="w-10 h-px bg-accent mb-6" />
+                <p className="text-accent text-[10px] sm:text-xs font-semibold tracking-[0.3em] uppercase mb-3">
+                  Pastor Alexandre Mendes
+                </p>
+                <h1 className="text-3xl sm:text-5xl lg:text-7xl font-bold leading-[0.95] tracking-tight text-white font-display">
+                  Pise Onde
+                  <br />
+                  Jesus <span className="italic text-accent">Pisou</span>
+                </h1>
+              </div>
 
-              <p className="mt-4 sm:mt-6 text-sm sm:text-lg text-white/60 max-w-md leading-relaxed drop-shadow-lg">
-                Uma experiência que nenhum livro pode oferecer. Mais de 25 anos
-                guiando vidas pela Terra Santa.
-              </p>
+              {/* Right — Scroll hint */}
+              <div className="hidden sm:flex flex-col items-center gap-2 pb-2">
+                <span className="text-white/30 text-[9px] tracking-[0.3em] uppercase [writing-mode:vertical-lr]">
+                  Scroll
+                </span>
+                <div className="w-px h-10 bg-gradient-to-b from-accent/50 to-transparent" />
+              </div>
             </div>
           </div>
         </div>
