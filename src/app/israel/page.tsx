@@ -575,7 +575,10 @@ export default function IsraelPage() {
           <p className="text-accent font-bold text-2xl sm:text-3xl font-display mb-2">
             Somente 37 vagas restantes
           </p>
-          <p className="text-white/50 text-sm sm:text-base mb-6">
+          <p className="text-white/50 text-sm sm:text-base mb-2">
+            As passagens estão com excelente preço agora — mas quanto mais você esperar, mais caro pode ficar.
+          </p>
+          <p className="text-white/30 text-xs mb-6">
             Não perca sua vaga na Terra Santa. As inscrições encerram em breve.
           </p>
           <Link
