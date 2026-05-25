@@ -32,13 +32,13 @@ const heroSlides = [
     ctaSecondary: { text: "Assistir Pregações", href: "/ministerio" },
   },
   {
-    image: "/images/israel/jerusalem-group-1.jpg",
-    label: "Quase 30 anos percorrendo a Terra Santa",
-    title: "Israel:",
-    titleAccent: "Minha Segunda Casa",
+    image: "/images/pastor-alexandre-guitar-israel.jpg",
+    label: "Historiador &middot; Pesquisador &middot; Adorador",
+    title: "Pise Onde",
+    titleAccent: "Jesus Pisou",
     description:
-      "Mais de 50 viagens a Israel. Quase três décadas estudando, vivendo e ensinando a Bíblia onde ela aconteceu. Uma experiência que nenhum livro pode oferecer.",
-    cta: { text: "Viagem a Israel", href: "/israel" },
+      "Mais de 25 anos percorrendo a Terra Santa como historiador e pesquisador. Não é turismo — é uma experiência que transforma sua fé para sempre. Chegou a sua vez.",
+    cta: { text: "Quero Ir a Israel", href: "/israel" },
     ctaSecondary: null,
   },
   {
@@ -255,8 +255,8 @@ export default function Home() {
             <div className="order-1 lg:order-2 relative">
               <div className="aspect-[3/4] overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/pastor-alexandre-portrait.jpg"
-                  alt="Pastor Alexandre Mendes"
+                  src="/images/pastor-alexandre-guitar-israel.jpg"
+                  alt="Pastor Alexandre tocando violão nas ruínas de Cafarnaum, Israel"
                   fill
                   className="object-cover"
                 />
@@ -291,20 +291,20 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
               <p className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.3em] text-accent mb-4">
-                Quase 30 Anos na Terra Santa
+                Historiador &middot; Pesquisador &middot; 25+ Anos na Terra Santa
               </p>
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white font-display leading-[1.05]">
-                Israel é minha
+                Pise Onde
                 <br />
-                <span className="text-accent italic">segunda casa</span>
+                <span className="text-accent italic">Jesus Pisou</span>
               </h2>
               <div className="w-12 h-px bg-accent mt-6 mb-6" />
               <p className="text-white/60 text-base sm:text-lg leading-relaxed">
-                Há quase três décadas percorro cada canto de Israel — não como
-                turista, mas como alguém que dedicou a vida a entender a Bíblia
-                no lugar onde ela foi escrita. Mais de 50 viagens. Milhares de
-                vidas transformadas. Uma paixão que se renova a cada vez que piso
-                na Terra Santa.
+                O Pastor Alexandre não é um guia turístico — é um{" "}
+                <strong className="text-white">historiador e pesquisador</strong>{" "}
+                que dedicou mais de 25 anos a estudar e viver a Bíblia na terra
+                onde ela foi escrita. Mais de 50 viagens. Milhares de vidas
+                transformadas. Chegou a sua vez.
               </p>
 
               {/* Spots counter */}
@@ -342,14 +342,31 @@ export default function Home() {
                   href="/israel"
                   className="inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-bold rounded-lg hover:bg-white/90 transition-colors text-base"
                 >
-                  Quero Conhecer Israel
+                  Quero Ir a Israel
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </div>
             </div>
 
-            {/* Photo grid */}
+            {/* Photo grid with guitar photo */}
             <div className="grid grid-cols-2 gap-3">
+              <div className="relative aspect-[3/4] overflow-hidden col-span-2 group">
+                <Image
+                  src="/images/pastor-alexandre-guitar-israel.jpg"
+                  alt="Pastor Alexandre tocando violão nas ruínas de Cafarnaum, Israel"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                <div className="absolute bottom-6 left-6">
+                  <p className="text-white font-bold font-display text-lg">
+                    Cafarnaum, Israel
+                  </p>
+                  <p className="text-white/60 text-sm">
+                    Adoração nas ruínas onde Jesus ensinou
+                  </p>
+                </div>
+              </div>
               <div className="relative aspect-[3/4] overflow-hidden group">
                 <Image
                   src="/images/israel/jordan-baptism-1.jpg"
@@ -358,30 +375,13 @@ export default function Home() {
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
-              <div className="relative aspect-[3/4] overflow-hidden mt-8 group">
+              <div className="relative aspect-[3/4] overflow-hidden group">
                 <Image
                   src="/images/israel/jordan-baptism-2.jpg"
                   alt="Batismo emocional no Jordão"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-              </div>
-              <div className="relative aspect-[3/4] overflow-hidden col-span-2 group">
-                <Image
-                  src="/images/israel/galilee-teaching-1.jpg"
-                  alt="Pastor Alexandre ensinando na Galileia"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                <div className="absolute bottom-6 left-6">
-                  <p className="text-white font-bold font-display text-lg">
-                    Mar da Galileia
-                  </p>
-                  <p className="text-white/60 text-sm">
-                    Estudo bíblico onde Jesus ensinou
-                  </p>
-                </div>
               </div>
             </div>
           </div>
@@ -555,15 +555,17 @@ export default function Home() {
 
         <div className="relative max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
           <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-accent mb-4">
-            Quase 30 Anos de Experiência
+            Chegou a Sua Vez
           </p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white font-display">
-            Conheça <span className="italic">Israel</span> Comigo
+            Pise Onde Jesus Pisou.
+            <br />
+            <span className="italic text-accent">Toque Onde Jesus Tocou.</span>
           </h2>
           <p className="mt-6 text-white/60 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-            Uma experiência que vai transformar sua fé para sempre. Independente
-            da sua igreja, esta viagem é para todos que desejam pisar na Terra
-            Santa com quem a conhece como ninguém.
+            Seja batizado nas mesmas águas do Rio Jordão. Caminhe pela Via
+            Dolorosa. Ore no Muro das Lamentações. Aberto para TODOS —
+            qualquer pessoa, de qualquer igreja.
           </p>
 
           <div className="mt-6 flex items-center justify-center gap-3 text-accent">
@@ -576,7 +578,7 @@ export default function Home() {
               href="/israel"
               className="inline-flex items-center justify-center gap-2 px-10 py-4 bg-white text-black font-bold rounded-lg hover:bg-white/90 transition-colors text-lg"
             >
-              Quero Conhecer Israel
+              Quero Ir a Israel
               <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
