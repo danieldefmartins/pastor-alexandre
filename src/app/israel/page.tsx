@@ -187,43 +187,41 @@ export default function IsraelPage() {
   return (
     <>
       {/* ==================== 1. HERO — FULL SCREEN VIDEO ==================== */}
-      <section className="relative min-h-screen flex items-end bg-black overflow-hidden">
-        <ScrollVideo
-          src="/videos/israel-clip-1.mp4"
-          className="absolute inset-0 w-full h-full"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-transparent" />
+      <ScrollVideo
+        src="/videos/israel-clip-1.mp4"
+        className="min-h-screen"
+      >
+        <div className="flex flex-col justify-end min-h-screen px-6 sm:px-8 lg:px-12 pb-16 sm:pb-24">
+          <div className="max-w-7xl mx-auto w-full">
+            <div className="max-w-3xl">
+              <p className="text-accent text-[10px] sm:text-xs font-semibold tracking-[0.3em] uppercase mb-4 sm:mb-6">
+                Israel com Pastor Alexandre Mendes
+              </p>
 
-        <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pb-20 sm:pb-32 w-full">
-          <div className="max-w-4xl">
-            <p className="text-accent text-xs sm:text-sm font-semibold tracking-[0.3em] uppercase mb-6">
-              Israel com Pastor Alexandre Mendes
-            </p>
+              <h1 className="text-4xl sm:text-6xl lg:text-[6rem] font-extrabold leading-[0.9] tracking-tight text-white font-display">
+                Pise Onde
+                <br />
+                <span className="text-accent">Jesus Pisou</span>
+              </h1>
 
-            <h1 className="text-5xl sm:text-7xl lg:text-[6rem] font-extrabold leading-[0.9] tracking-tight text-white font-display">
-              Pise Onde
-              <br />
-              <span className="text-accent">Jesus Pisou</span>
-            </h1>
-
-            <p className="mt-6 sm:mt-8 text-lg sm:text-xl text-white/60 max-w-xl leading-relaxed">
-              Uma experiência que nenhum livro pode oferecer. Mais de 25 anos
-              guiando vidas pela Terra Santa.
-            </p>
+              <p className="mt-4 sm:mt-6 text-sm sm:text-lg text-white/60 max-w-md leading-relaxed">
+                Uma experiência que nenhum livro pode oferecer. Mais de 25 anos
+                guiando vidas pela Terra Santa.
+              </p>
+            </div>
           </div>
         </div>
-      </section>
+      </ScrollVideo>
 
       {/* ==================== 2. CTA BAR ==================== */}
       <section className="bg-primary border-y border-accent/20 sticky top-0 z-40">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-4">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-6 sm:gap-8">
-              <div className="flex items-center gap-2">
-                <Users className="w-5 h-5 text-accent" />
-                <span className="text-accent font-bold text-sm sm:text-base">
-                  37 vagas restantes
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-3 sm:py-4">
+          <div className="flex items-center justify-between gap-3">
+            <div className="flex items-center gap-2 sm:gap-6">
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <Users className="w-4 h-4 sm:w-5 sm:h-5 text-accent shrink-0" />
+                <span className="text-accent font-bold text-xs sm:text-base whitespace-nowrap">
+                  37 vagas
                 </span>
               </div>
               <div className="hidden sm:block">
@@ -236,10 +234,10 @@ export default function IsraelPage() {
             </div>
             <Link
               href="#reservar"
-              className="inline-flex items-center gap-2 px-8 py-3 bg-accent text-primary font-bold rounded-lg hover:bg-accent-light transition-colors text-sm sm:text-base whitespace-nowrap"
+              className="inline-flex items-center gap-1.5 sm:gap-2 px-4 sm:px-8 py-2.5 sm:py-3 bg-accent text-primary font-bold rounded-lg hover:bg-accent-light transition-colors text-xs sm:text-base whitespace-nowrap shrink-0"
             >
               Quero Minha Vaga
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             </Link>
           </div>
         </div>
