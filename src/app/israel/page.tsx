@@ -203,31 +203,42 @@ export default function IsraelPage() {
   return (
     <>
       {/* ==================== 1. HERO — FULL SCREEN VIDEO ==================== */}
-      <ScrollVideo
-        src="/videos/israel-clip-1.mp4"
-        className="min-h-screen"
-      >
-        <div className="flex flex-col justify-end min-h-screen px-6 sm:px-8 lg:px-12 pb-16 sm:pb-24">
+      <section className="relative min-h-screen bg-black overflow-hidden">
+        {/* Video background — absolute to fill entire screen */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/videos/israel-clip-1.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent" />
+
+        {/* Content anchored to bottom */}
+        <div className="relative flex flex-col justify-end min-h-screen px-6 sm:px-8 lg:px-12 pb-16 sm:pb-24">
           <div className="max-w-7xl mx-auto w-full">
             <div className="max-w-3xl">
-              <p className="text-accent text-[10px] sm:text-xs font-semibold tracking-[0.3em] uppercase mb-4 sm:mb-6">
+              <p className="text-accent text-[10px] sm:text-xs font-semibold tracking-[0.3em] uppercase mb-4 sm:mb-6 drop-shadow-lg">
                 Israel com Pastor Alexandre Mendes
               </p>
 
-              <h1 className="text-4xl sm:text-6xl lg:text-[6rem] font-extrabold leading-[0.9] tracking-tight text-white font-display">
+              <h1 className="text-4xl sm:text-6xl lg:text-[6rem] font-extrabold leading-[0.9] tracking-tight text-white font-display drop-shadow-2xl">
                 Pise Onde
                 <br />
                 <span className="text-accent">Jesus Pisou</span>
               </h1>
 
-              <p className="mt-4 sm:mt-6 text-sm sm:text-lg text-white/60 max-w-md leading-relaxed">
+              <p className="mt-4 sm:mt-6 text-sm sm:text-lg text-white/60 max-w-md leading-relaxed drop-shadow-lg">
                 Uma experiência que nenhum livro pode oferecer. Mais de 25 anos
                 guiando vidas pela Terra Santa.
               </p>
             </div>
           </div>
         </div>
-      </ScrollVideo>
+      </section>
 
       {/* ==================== 2. CTA BAR ==================== */}
       <section className="bg-primary border-y border-accent/20 sticky top-0 z-40">
