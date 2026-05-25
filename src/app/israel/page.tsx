@@ -33,6 +33,7 @@ const itinerary = [
     description:
       "Muro das Lamentações, Monte do Templo, Via Dolorosa, Santo Sepulcro. Caminhe pelas mesmas ruas onde Jesus carregou a cruz.",
     icon: Church,
+    image: "/images/israel/jerusalem-group-1.jpg",
   },
   {
     day: "Dia 3",
@@ -40,6 +41,7 @@ const itinerary = [
     description:
       "Vista panorâmica de Jerusalém, Getsêmani, o jardim onde Jesus orou antes da crucificação. Adoração ao pôr do sol.",
     icon: Mountain,
+    image: "/images/israel/jerusalem-group-2.jpg",
   },
   {
     day: "Dia 4",
@@ -47,6 +49,7 @@ const itinerary = [
     description:
       "Batismo nas mesmas águas onde Jesus foi batizado por João Batista. O momento mais emocionante da viagem.",
     icon: Droplets,
+    image: "/images/israel/jordan-river-group.jpg",
   },
   {
     day: "Dia 5",
@@ -54,6 +57,7 @@ const itinerary = [
     description:
       "Onde Jesus andou sobre as águas, acalmou a tempestade e chamou seus discípulos. Estudo bíblico com o Pastor Alexandre.",
     icon: Waves,
+    image: "/images/israel/galilee-teaching-1.jpg",
   },
   {
     day: "Dia 6",
@@ -61,6 +65,7 @@ const itinerary = [
     description:
       "A cidade onde Jesus cresceu e o lugar onde Ele nasceu. Dois marcos fundamentais da história sagrada.",
     icon: Star,
+    image: "/images/israel/jerusalem-group-3.jpg",
   },
   {
     day: "Dia 7",
@@ -68,20 +73,31 @@ const itinerary = [
     description:
       "A cidade de Jesus na Galileia. O local da multiplicação dos pães. Ruínas milenares que contam histórias vivas.",
     icon: BookOpen,
+    image: "/images/pastor-alexandre-guitar-israel.jpg",
   },
   {
     day: "Dia 8",
+    title: "Batismo no Jordão",
+    description:
+      "Batismo nas águas sagradas do Rio Jordão. Lágrimas, oração e um encontro pessoal com Deus que marca para sempre.",
+    icon: Droplets,
+    image: "/images/israel/jordan-baptism-1.jpg",
+  },
+  {
+    day: "Dia 9",
     title: "Mar Morto",
     description:
       "Flutuação nas águas mais salgadas do mundo, o ponto mais baixo da Terra. Uma experiência única e inesquecível.",
     icon: Globe,
+    image: "/images/israel/galilee-teaching-3.jpg",
   },
   {
-    day: "Dia 9-10",
+    day: "Dia 10",
     title: "Masada & Deserto",
     description:
       "Nascer do sol em Masada, a fortaleza de Herodes. Caminhada pelo deserto da Judeia onde Jesus foi tentado.",
     icon: Sunrise,
+    image: "/images/israel/galilee-teaching-2.jpg",
   },
 ];
 
@@ -631,44 +647,84 @@ export default function IsraelPage() {
         </div>
       </section>
 
-      {/* ==================== 7. ITINERARY ==================== */}
-      <section className="py-20 sm:py-28 bg-primary">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="text-center mb-12 sm:mb-16">
-            <p className="text-accent text-xs font-semibold tracking-[0.3em] uppercase mb-3">
+      {/* ==================== 7. ITINERARY — HORIZONTAL SCROLL ==================== */}
+      <section className="py-20 sm:py-28 bg-primary overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 mb-10 sm:mb-14">
+          <div className="text-center">
+            <p className="text-accent text-[10px] sm:text-xs font-semibold tracking-[0.3em] uppercase mb-3">
               Roteiro
             </p>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white font-display">
-              Uma Jornada pela Terra Santa
+              Uma Jornada pela <span className="italic">Terra Santa</span>
             </h2>
             <p className="mt-4 text-white/50 text-base sm:text-lg max-w-2xl mx-auto">
-              Cada dia é uma nova descoberta. Cada lugar, uma página da Bíblia
-              ganhando vida diante dos seus olhos.
+              Deslize para explorar cada dia da viagem
             </p>
           </div>
+        </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            {itinerary.map((item) => (
-              <div
-                key={item.title}
-                className="group p-6 bg-white/5 rounded-2xl border border-white/10 hover:border-accent/30 hover:bg-white/10 transition-all duration-300"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center">
-                    <item.icon className="w-5 h-5 text-accent" />
-                  </div>
-                  <span className="text-xs font-bold uppercase tracking-wider text-accent">
+        {/* Horizontal scroll container */}
+        <div className="flex gap-4 sm:gap-6 overflow-x-auto px-6 sm:px-8 lg:px-12 pb-6 snap-x snap-mandatory scrollbar-hide" style={{ WebkitOverflowScrolling: "touch" }}>
+          {itinerary.map((item) => (
+            <div
+              key={item.title}
+              className="group relative shrink-0 w-[280px] sm:w-[340px] lg:w-[380px] snap-start"
+            >
+              {/* Photo */}
+              <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+
+                {/* Day badge */}
+                <div className="absolute top-4 left-4 bg-accent px-3 py-1.5 rounded">
+                  <span className="text-xs font-bold uppercase tracking-wider text-primary">
                     {item.day}
                   </span>
                 </div>
-                <h3 className="text-lg font-bold text-white group-hover:text-accent transition-colors">
-                  {item.title}
-                </h3>
-                <p className="mt-2 text-white/50 text-sm leading-relaxed">
-                  {item.description}
-                </p>
+
+                {/* Content at bottom */}
+                <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6">
+                  <div className="flex items-center gap-2 mb-2">
+                    <item.icon className="w-4 h-4 text-accent" />
+                    <h3 className="text-lg sm:text-xl font-bold text-white font-display">
+                      {item.title}
+                    </h3>
+                  </div>
+                  <p className="text-white/60 text-xs sm:text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
               </div>
-            ))}
+            </div>
+          ))}
+
+          {/* Final card — CTA */}
+          <div className="shrink-0 w-[280px] sm:w-[340px] lg:w-[380px] snap-start flex items-center justify-center">
+            <div className="text-center px-8">
+              <p className="text-accent text-4xl sm:text-5xl font-extrabold font-display mb-4">
+                10
+              </p>
+              <p className="text-white/40 text-xs uppercase tracking-[0.2em] mb-2">
+                Dias que vão
+              </p>
+              <p className="text-white font-bold text-xl sm:text-2xl font-display">
+                Transformar
+                <br />
+                <span className="text-accent italic">Sua Vida</span>
+              </p>
+              <Link
+                href="#reservar"
+                className="inline-flex items-center gap-2 mt-6 px-6 py-3 bg-accent text-primary font-bold rounded-lg hover:bg-accent-light transition-colors text-sm"
+              >
+                Reservar Vaga
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
