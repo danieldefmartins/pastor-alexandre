@@ -2,12 +2,14 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import {
   ArrowRight,
   Users,
   Star,
   ChevronDown,
+  Volume2,
+  VolumeX,
   CheckCircle,
   HelpCircle,
   BookOpen,
@@ -143,7 +145,7 @@ const faqs = [
   {
     question: "Qual é a duração da viagem?",
     answer:
-      "A viagem tem duração de 8 a 10 dias, cobrindo os principais pontos bíblicos de Israel com tempo para adoração, reflexão e estudo profundo em cada local sagrado.",
+      "A viagem tem duração de 10 dias, cobrindo os principais pontos bíblicos de Israel com tempo para adoração, reflexão e estudo profundo em cada local sagrado.",
   },
   {
     question: "O que está incluído no pacote?",
@@ -200,12 +202,23 @@ function FAQItem({
 }
 
 export default function IsraelPage() {
+  const heroVideoRef = useRef<HTMLVideoElement>(null);
+  const [heroMuted, setHeroMuted] = useState(true);
+
+  const toggleHeroMute = () => {
+    if (heroVideoRef.current) {
+      heroVideoRef.current.muted = !heroMuted;
+      setHeroMuted(!heroMuted);
+    }
+  };
+
   return (
     <>
       {/* ==================== 1. HERO — CINEMATIC FULL SCREEN ==================== */}
       <section className="relative h-screen bg-black overflow-hidden">
         {/* Video fills entire viewport */}
         <video
+          ref={heroVideoRef}
           autoPlay
           muted
           loop
@@ -217,6 +230,19 @@ export default function IsraelPage() {
 
         {/* Subtle bottom gradient only — let the video breathe */}
         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
+
+        {/* Volume toggle */}
+        <button
+          onClick={toggleHeroMute}
+          className="absolute top-24 sm:top-28 right-4 sm:right-8 w-11 h-11 bg-black/40 backdrop-blur-sm rounded-full flex items-center justify-center text-white/70 hover:bg-black/60 hover:text-white transition-all z-20"
+          aria-label={heroMuted ? "Ativar som" : "Desativar som"}
+        >
+          {heroMuted ? (
+            <VolumeX className="w-5 h-5" />
+          ) : (
+            <Volume2 className="w-5 h-5" />
+          )}
+        </button>
 
         {/* Content at the very bottom — minimal, elegant */}
         <div className="absolute bottom-0 left-0 right-0 z-10">
@@ -442,6 +468,22 @@ export default function IsraelPage() {
         </div>
       </section>
 
+      {/* ==================== CTA BREAK 1 ==================== */}
+      <section className="bg-accent py-6 sm:py-8">
+        <div className="max-w-4xl mx-auto px-6 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+          <p className="text-primary font-bold text-base sm:text-lg font-display">
+            Apenas <span className="text-2xl sm:text-3xl">37</span> vagas restantes para a próxima viagem
+          </p>
+          <Link
+            href="#reservar"
+            className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary-light transition-colors text-sm whitespace-nowrap shrink-0"
+          >
+            Reservar Minha Vaga
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </section>
+
       {/* ==================== 5. PASTOR ALEXANDRE ==================== */}
       <section className="py-20 sm:py-32 bg-warm-white">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
@@ -478,7 +520,8 @@ export default function IsraelPage() {
               </h2>
               <div className="w-12 h-px bg-accent mt-6 mb-6" />
               <p className="text-base sm:text-lg text-stone-500 leading-relaxed">
-                O Pastor Alexandre Mendes não é um guia turístico. Não é um
+                O Pastor Alexandre Mendes — <strong>Pastor Titular da TDM
+                Church em Boston, EUA</strong> — não é um guia turístico. Não é um
                 agente de viagens. É um <strong>historiador</strong> e{" "}
                 <strong>pesquisador</strong> que dedicou a vida inteira a
                 estudar Israel. Ele não lê sobre os lugares — ele{" "}
@@ -523,6 +566,25 @@ export default function IsraelPage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ==================== CTA BREAK 2 ==================== */}
+      <section className="bg-black py-10 sm:py-14">
+        <div className="max-w-3xl mx-auto px-6 sm:px-8 text-center">
+          <p className="text-accent font-bold text-2xl sm:text-3xl font-display mb-2">
+            Somente 37 vagas restantes
+          </p>
+          <p className="text-white/50 text-sm sm:text-base mb-6">
+            Não perca sua vaga na Terra Santa. As inscrições encerram em breve.
+          </p>
+          <Link
+            href="#reservar"
+            className="inline-flex items-center gap-2 px-10 py-4 bg-white text-black font-bold rounded-lg hover:bg-white/90 transition-colors text-base"
+          >
+            Garantir Minha Vaga Agora
+            <ArrowRight className="w-5 h-5" />
+          </Link>
         </div>
       </section>
 
@@ -744,6 +806,27 @@ export default function IsraelPage() {
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ==================== CTA BREAK 3 ==================== */}
+      <section className="bg-accent py-6 sm:py-8">
+        <div className="max-w-4xl mx-auto px-6 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+          <div>
+            <p className="text-primary font-bold text-sm sm:text-base">
+              As vagas estão acabando. Não deixe para depois.
+            </p>
+            <p className="text-primary/60 text-xs sm:text-sm mt-1">
+              Somente 37 vagas restantes &middot; Inscrições por ordem de chegada
+            </p>
+          </div>
+          <Link
+            href="#reservar"
+            className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary-light transition-colors text-sm whitespace-nowrap shrink-0"
+          >
+            Reservar Agora
+            <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
       </section>
 
@@ -1018,6 +1101,16 @@ export default function IsraelPage() {
           </div>
         </div>
       </section>
+      {/* ==================== FLOATING CTA — MOBILE ==================== */}
+      <div className="fixed bottom-0 left-0 right-0 z-50 sm:hidden bg-black/90 backdrop-blur-md border-t border-accent/20 px-4 py-3 safe-area-pb">
+        <Link
+          href="#reservar"
+          className="flex items-center justify-center gap-2 w-full py-3.5 bg-accent text-primary font-bold rounded-lg text-sm"
+        >
+          Garantir Minha Vaga — 37 restantes
+          <ArrowRight className="w-4 h-4" />
+        </Link>
+      </div>
     </>
   );
 }
