@@ -258,7 +258,7 @@ export default function Home() {
                   src="/images/pastor-alexandre-guitar-israel.jpg"
                   alt="Pastor Alexandre tocando violão nas ruínas de Cafarnaum, Israel"
                   fill
-                  className="object-cover"
+                  className="object-cover sm:object-top"
                 />
               </div>
               <div className="absolute -bottom-8 -right-8 bg-black text-white p-6 sm:p-8">
@@ -355,7 +355,7 @@ export default function Home() {
                   src="/images/pastor-alexandre-guitar-israel.jpg"
                   alt="Pastor Alexandre tocando violão nas ruínas de Cafarnaum, Israel"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="object-cover sm:object-top group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                 <div className="absolute bottom-6 left-6">
@@ -372,7 +372,7 @@ export default function Home() {
                   src="/images/israel/jordan-baptism-1.jpg"
                   alt="Batismo no Rio Jordão"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="object-cover sm:object-top group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
               <div className="relative aspect-[3/4] overflow-hidden group">
@@ -380,7 +380,7 @@ export default function Home() {
                   src="/images/israel/jordan-baptism-2.jpg"
                   alt="Batismo emocional no Jordão"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="object-cover sm:object-top group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
             </div>
@@ -458,7 +458,7 @@ export default function Home() {
                 src="/images/israel/galilee-teaching-2.jpg"
                 alt="Pastor Alexandre — TDM Talk"
                 fill
-                className="object-cover"
+                className="object-cover sm:object-top"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
               <div className="absolute bottom-8 left-8 right-8">
@@ -516,7 +516,7 @@ export default function Home() {
                 src="/images/pastor-alexandre-headshot.jpg"
                 alt="Pastor Alexandre Mendes"
                 fill
-                className="object-cover"
+                className="object-cover sm:object-top"
               />
             </div>
 
@@ -548,7 +548,7 @@ export default function Home() {
             src="/images/israel/jordan-baptism-5.jpg"
             alt="Abraço emocionante no Jordão"
             fill
-            className="object-cover"
+            className="object-cover sm:object-top"
           />
         </div>
         <div className="absolute inset-0 bg-black/50" />

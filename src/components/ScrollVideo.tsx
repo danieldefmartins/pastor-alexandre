@@ -1,34 +1,32 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
-import { Volume2, VolumeX } from "lucide-react";
+import { useState, useRef, useEffect, useCallback } from "react";
+import { Volume2, VolumeX, RotateCcw } from "lucide-react";
 
 interface ScrollVideoProps {
   src: string;
   className?: string;
   children?: React.ReactNode;
+  startMuted?: boolean;
 }
 
 export default function ScrollVideo({
   src,
   className = "",
   children,
+  startMuted = true,
 }: ScrollVideoProps) {
-  const [isVisible, setIsVisible] = useState(false);
-  const [muted, setMuted] = useState(false);
+  const [muted, setMuted] = useState(startMuted);
+  const [ended, setEnded] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        const visible = entry.isIntersecting;
-        setIsVisible(visible);
-
         if (videoRef.current) {
-          if (visible) {
+          if (entry.isIntersecting) {
             videoRef.current.play().catch(() => {
-              // Autoplay with sound blocked — fallback to muted
               if (videoRef.current) {
                 videoRef.current.muted = true;
                 setMuted(true);
@@ -58,14 +56,27 @@ export default function ScrollVideo({
     }
   };
 
+  const replay = useCallback(() => {
+    if (videoRef.current) {
+      videoRef.current.currentTime = 0;
+      videoRef.current.play();
+      setEnded(false);
+    }
+  }, []);
+
+  const handleEnded = () => {
+    setEnded(true);
+  };
+
   return (
     <div ref={containerRef} className={`relative overflow-hidden ${className}`}>
       <video
         ref={videoRef}
         muted={muted}
-        loop
+        loop={false}
         playsInline
         preload="metadata"
+        onEnded={handleEnded}
         className="w-full h-full object-cover"
       >
         <source src={src} type="video/mp4" />
@@ -81,10 +92,23 @@ export default function ScrollVideo({
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20 pointer-events-none" />
 
+      {/* Ended overlay with replay */}
+      {ended && (
+        <div className="absolute inset-0 bg-black/60 flex items-center justify-center z-10">
+          <button
+            onClick={replay}
+            className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
+            aria-label="Assistir novamente"
+          >
+            <RotateCcw className="w-7 h-7" />
+          </button>
+        </div>
+      )}
+
       {/* Volume toggle */}
       <button
         onClick={toggleMute}
-        className="absolute bottom-4 right-4 w-11 h-11 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors z-10"
+        className="absolute bottom-4 right-4 w-11 h-11 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white/70 hover:bg-black/70 hover:text-white transition-all z-20"
         aria-label={muted ? "Ativar som" : "Desativar som"}
       >
         {muted ? (

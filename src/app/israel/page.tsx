@@ -223,7 +223,7 @@ export default function IsraelPage() {
           muted
           loop
           playsInline
-          className="absolute inset-0 w-full h-full object-cover opacity-80"
+          className="absolute inset-0 w-full h-full object-cover sm:object-top opacity-80"
         >
           <source src="/videos/israel-clip-1.mp4" type="video/mp4" />
         </video>
@@ -337,7 +337,7 @@ export default function IsraelPage() {
                   src="/images/israel/jordan-baptism-1.jpg"
                   alt="Batismo emocionante no Rio Jordão"
                   fill
-                  className="object-cover"
+                  className="object-cover sm:object-top"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
               </div>
@@ -350,7 +350,7 @@ export default function IsraelPage() {
                   src="/images/israel/jerusalem-group-2.jpg"
                   alt="Grupo caminhando em Jerusalém"
                   fill
-                  className="object-cover"
+                  className="object-cover sm:object-top"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
               </div>
@@ -394,7 +394,7 @@ export default function IsraelPage() {
                   src="/images/israel/jerusalem-group-3.jpg"
                   alt="Grupo no Muro das Lamentações"
                   fill
-                  className="object-cover"
+                  className="object-cover sm:object-top"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
               </div>
@@ -407,7 +407,7 @@ export default function IsraelPage() {
                   src="/images/israel/galilee-teaching-1.jpg"
                   alt="Pastor Alexandre ensinando com vista para a Galileia"
                   fill
-                  className="object-cover"
+                  className="object-cover sm:object-top"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
               </div>
@@ -494,7 +494,7 @@ export default function IsraelPage() {
                   src="/images/pastor-alexandre-guitar-israel.jpg"
                   alt="Pastor Alexandre tocando violão nas ruínas de Cafarnaum, Israel"
                   fill
-                  className="object-cover"
+                  className="object-cover sm:object-top"
                 />
               </div>
               <div className="absolute -bottom-6 -right-6 bg-accent rounded-2xl shadow-xl p-6">
@@ -611,7 +611,7 @@ export default function IsraelPage() {
                 alt="Grupo em Jerusalém com bandeira de Israel"
                 width={1200}
                 height={800}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                className="w-full h-full object-cover sm:object-top group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -628,7 +628,7 @@ export default function IsraelPage() {
                 src="/images/israel/jordan-baptism-1.jpg"
                 alt="Batismo no Rio Jordão"
                 fill
-                className="object-cover group-hover:scale-105 transition-transform duration-700"
+                className="object-cover sm:object-top group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
             </div>
@@ -639,7 +639,7 @@ export default function IsraelPage() {
                 src="/images/israel/jordan-baptism-2.jpg"
                 alt="Batismo emocional"
                 fill
-                className="object-cover group-hover:scale-105 transition-transform duration-700"
+                className="object-cover sm:object-top group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
             </div>
@@ -650,7 +650,7 @@ export default function IsraelPage() {
                 src="/images/israel/galilee-teaching-2.jpg"
                 alt="Pastor Alexandre ensinando na Galileia"
                 fill
-                className="object-cover group-hover:scale-105 transition-transform duration-700"
+                className="object-cover sm:object-top group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
             </div>
@@ -661,7 +661,7 @@ export default function IsraelPage() {
                 src="/images/israel/jordan-baptism-3.jpg"
                 alt="Momento de oração no batismo"
                 fill
-                className="object-cover group-hover:scale-105 transition-transform duration-700"
+                className="object-cover sm:object-top group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
             </div>
@@ -672,7 +672,7 @@ export default function IsraelPage() {
                 src="/images/israel/jordan-river-group.jpg"
                 alt="Grupo completo no Rio Jordão vestidos de branco"
                 fill
-                className="object-cover group-hover:scale-105 transition-transform duration-700"
+                className="object-cover sm:object-top group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -689,7 +689,7 @@ export default function IsraelPage() {
                 src="/images/israel/galilee-teaching-3.jpg"
                 alt="Ensinamento na Galileia"
                 fill
-                className="object-cover group-hover:scale-105 transition-transform duration-700"
+                className="object-cover sm:object-top group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
             </div>
@@ -700,7 +700,7 @@ export default function IsraelPage() {
                 src="/images/israel/jordan-baptism-4.jpg"
                 alt="Batismo emocionante"
                 fill
-                className="object-cover group-hover:scale-105 transition-transform duration-700"
+                className="object-cover sm:object-top group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
             </div>
@@ -711,7 +711,7 @@ export default function IsraelPage() {
                 src="/images/israel/jerusalem-group-2.jpg"
                 alt="Grupo em Jerusalém"
                 fill
-                className="object-cover group-hover:scale-105 transition-transform duration-700"
+                className="object-cover sm:object-top group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
             </div>
@@ -722,7 +722,7 @@ export default function IsraelPage() {
                 src="/images/israel/jordan-baptism-5.jpg"
                 alt="Abraço emocionante após batismo"
                 fill
-                className="object-cover group-hover:scale-105 transition-transform duration-700"
+                className="object-cover sm:object-top group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
             </div>
@@ -759,7 +759,7 @@ export default function IsraelPage() {
                   src={item.image}
                   alt={item.title}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="object-cover sm:object-top group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
@@ -936,7 +936,7 @@ export default function IsraelPage() {
             src="/images/israel/jordan-river-group.jpg"
             alt="Grupo no Rio Jordão"
             fill
-            className="object-cover opacity-10"
+            className="object-cover sm:object-top opacity-10"
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-black to-black/95" />
