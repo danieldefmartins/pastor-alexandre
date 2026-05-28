@@ -833,27 +833,51 @@ export default function IsraelPage() {
         </div>
       </section>
 
-      {/* ==================== 8. TESTIMONIALS ==================== */}
-      <section className="py-20 sm:py-28 bg-cream">
+      {/* ==================== 8. VIDEO TESTIMONIALS ==================== */}
+      <section className="py-20 sm:py-28 bg-black">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="text-center mb-12 sm:mb-16">
-            <p className="text-accent text-xs font-semibold tracking-[0.3em] uppercase mb-3">
-              Depoimentos
+            <p className="text-accent text-[10px] sm:text-xs font-semibold tracking-[0.3em] uppercase mb-3">
+              Depoimentos Reais
             </p>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-primary font-display">
-              Vidas Transformadas
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white font-display">
+              Vidas <span className="italic text-accent">Transformadas</span>
             </h2>
-            <p className="mt-4 text-stone-500 text-base sm:text-lg max-w-2xl mx-auto">
-              Pessoas reais que pisaram na Terra Santa com o Pastor Alexandre e
-              nunca mais foram as mesmas.
+            <p className="mt-4 text-white/50 text-base sm:text-lg max-w-2xl mx-auto">
+              Ouça de quem já pisou na Terra Santa com o Pastor Alexandre.
+              Histórias reais. Emoções reais. Vidas que nunca mais foram as mesmas.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
+          {/* Video testimonials — horizontal scroll */}
+          <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide" style={{ WebkitOverflowScrolling: "touch" }}>
+            {[
+              { src: "/videos/Testemunho/testemunho-1.mp4", label: "Testemunho 1" },
+              { src: "/videos/Testemunho/testemunho-2.mp4", label: "Testemunho 2" },
+              { src: "/videos/Testemunho/testemunho-3.mp4", label: "Testemunho 3" },
+              { src: "/videos/Testemunho/testemunho-4.mp4", label: "Testemunho 4" },
+              { src: "/videos/Testemunho/testemunho-5.mp4", label: "Testemunho 5" },
+            ].map((video) => (
+              <div
+                key={video.src}
+                className="shrink-0 w-[280px] sm:w-[320px] snap-start"
+              >
+                <ScrollVideo
+                  src={video.src}
+                  className="aspect-[9/16] rounded-lg w-full"
+                >
+                  {null}
+                </ScrollVideo>
+              </div>
+            ))}
+          </div>
+
+          {/* Written testimonials below */}
+          <div className="grid md:grid-cols-2 gap-6 sm:gap-8 mt-16">
             {testimonials.map((testimonial) => (
               <div
                 key={testimonial.name}
-                className="bg-white rounded-2xl p-6 sm:p-8 border border-stone-100 shadow-sm"
+                className="bg-white/5 border border-white/10 p-6 sm:p-8"
               >
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
@@ -863,14 +887,14 @@ export default function IsraelPage() {
                     />
                   ))}
                 </div>
-                <p className="text-stone-700 text-sm sm:text-base leading-relaxed italic">
+                <p className="text-white/70 text-sm sm:text-base leading-relaxed italic">
                   &ldquo;{testimonial.text}&rdquo;
                 </p>
-                <div className="mt-6 pt-4 border-t border-stone-100">
-                  <p className="font-bold text-primary text-sm">
+                <div className="mt-6 pt-4 border-t border-white/10">
+                  <p className="font-bold text-white text-sm">
                     {testimonial.name}
                   </p>
-                  <p className="text-stone-500 text-xs">{testimonial.trip}</p>
+                  <p className="text-white/40 text-xs">{testimonial.trip}</p>
                 </div>
               </div>
             ))}
