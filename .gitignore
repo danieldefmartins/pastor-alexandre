@@ -42,3 +42,13 @@ next-env.d.ts
 
 # Large video files (use CDN instead)
 public/videos/israel/WhatsApp Video 2026-05-22 at 07.05.22.mp4
+
+# OpenNext
+.open-next
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+
+!.env.example
