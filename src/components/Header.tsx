@@ -7,7 +7,7 @@ import { Menu, X, ChevronDown, Play } from "lucide-react";
 
 const navLinks = [
   { name: "Sobre", href: "/sobre" },
-  { name: "Israel", href: "/israel" },
+  { name: "Viagens", href: "/viagens" },
   { name: "Ministério", href: "/ministerio" },
   { name: "Música", href: "/musica" },
   { name: "TDM Talk", href: "/tdm-talk" },
@@ -52,7 +52,7 @@ export default function Header() {
                   key={link.href}
                   href={link.href}
                   className={`px-4 py-2 text-sm font-medium transition-colors ${
-                    link.name === "Israel"
+                    link.name === "Viagens"
                       ? "text-accent hover:text-accent-light"
                       : "text-white/80 hover:text-white"
                   }`}
@@ -65,10 +65,10 @@ export default function Header() {
             {/* Desktop CTA */}
             <div className="hidden lg:flex items-center gap-3">
               <Link
-                href="/israel"
+                href="/viagens"
                 className="flex items-center gap-2 px-6 py-2.5 bg-accent text-primary text-sm font-bold rounded-lg hover:bg-accent-light transition-colors"
               >
-                Viagem a Israel
+                Viagens
               </Link>
             </div>
 
@@ -98,7 +98,7 @@ export default function Header() {
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
                   className={`block px-4 py-3 text-sm font-medium rounded-lg ${
-                    link.name === "Israel"
+                    link.name === "Viagens"
                       ? "text-accent hover:bg-accent/10"
                       : "text-white/80 hover:bg-white/5"
                   }`}
@@ -109,11 +109,11 @@ export default function Header() {
             </div>
             <div className="px-4 mt-4">
               <Link
-                href="/israel"
+                href="/viagens"
                 onClick={() => setMobileOpen(false)}
                 className="block w-full text-center px-6 py-3 bg-accent text-primary font-bold rounded-lg"
               >
-                Viagem a Israel
+                Viagens
               </Link>
             </div>
           </div>

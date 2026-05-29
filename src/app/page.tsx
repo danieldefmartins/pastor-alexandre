@@ -38,7 +38,7 @@ const heroSlides = [
     titleAccent: "Jesus Pisou",
     description:
       "Mais de 25 anos percorrendo a Terra Santa como historiador e pesquisador. Não é turismo — é uma experiência que transforma sua fé para sempre. Chegou a sua vez.",
-    cta: { text: "Quero Ir a Israel", href: "/israel" },
+    cta: { text: "Conheça Nossas Viagens", href: "/viagens" },
     ctaSecondary: null,
   },
   {
@@ -159,9 +159,9 @@ export default function Home() {
             {[
               {
                 icon: Plane,
-                title: "Viagem a Israel",
-                desc: "Próxima viagem — 37 vagas",
-                href: "/israel",
+                title: "Viagens",
+                desc: "Israel, Egito & Turquia",
+                href: "/viagens",
                 accent: true,
               },
               {
@@ -274,7 +274,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ==================== ISRAEL — FULL BLEED ==================== */}
+      {/* ==================== VIAGENS — FULL BLEED ==================== */}
       <section className="relative py-24 sm:py-32 bg-black overflow-hidden">
         <div className="absolute inset-0">
           <Image
@@ -294,55 +294,59 @@ export default function Home() {
                 Historiador &middot; Pesquisador &middot; 25+ Anos na Terra Santa
               </p>
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white font-display leading-[1.05]">
-                Pise Onde
+                Viagens com
                 <br />
-                <span className="text-accent italic">Jesus Pisou</span>
+                <span className="text-accent italic">Pastor Alexandre</span>
               </h2>
               <div className="w-12 h-px bg-accent mt-6 mb-6" />
               <p className="text-white/60 text-base sm:text-lg leading-relaxed">
                 O Pastor Alexandre não é um guia turístico — é um{" "}
                 <strong className="text-white">historiador e pesquisador</strong>{" "}
                 que dedicou mais de 25 anos a estudar e viver a Bíblia na terra
-                onde ela foi escrita. Mais de 50 viagens. Milhares de vidas
-                transformadas. Chegou a sua vez.
+                onde ela foi escrita. Pague parcelado e realize seu sonho de
+                pisar na Terra Santa.
               </p>
 
-              {/* Spots counter */}
-              <div className="mt-8 p-6 bg-white/5 backdrop-blur-sm border border-accent/20">
-                <div className="flex items-center justify-between mb-4">
-                  <p className="text-white font-semibold text-sm">
-                    Vagas — Próxima Viagem
-                  </p>
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-4xl font-extrabold text-accent font-display">
-                      37
-                    </span>
-                    <span className="text-white/40 text-sm">/ 100</span>
+              {/* Trip cards mini */}
+              <div className="mt-8 space-y-3">
+                <Link
+                  href="/israel"
+                  className="flex items-center justify-between p-4 bg-white/5 border border-accent/20 hover:bg-white/10 transition-colors group"
+                >
+                  <div>
+                    <p className="text-white font-bold text-sm">Israel</p>
+                    <p className="text-white/40 text-xs">Outubro 2026 &middot; 10 dias &middot; 37 vagas</p>
                   </div>
-                </div>
-                <div className="w-full bg-white/10 rounded-full h-2">
-                  <div
-                    className="bg-accent rounded-full h-2"
-                    style={{ width: "63%" }}
-                  />
-                </div>
-              </div>
-
-              <div className="mt-6">
-                <CountdownTimer
-                  targetDate="2026-10-15T00:00:00"
-                  label="Contagem Regressiva"
-                  light
-                  size="sm"
-                />
+                  <ArrowRight className="w-4 h-4 text-accent group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link
+                  href="/viagens/israel-egito"
+                  className="flex items-center justify-between p-4 bg-white/5 border border-white/10 hover:bg-white/10 transition-colors group"
+                >
+                  <div>
+                    <p className="text-white font-bold text-sm">Israel & Egito</p>
+                    <p className="text-white/40 text-xs">Abril 2027 &middot; 10 dias &middot; 40 vagas</p>
+                  </div>
+                  <ArrowRight className="w-4 h-4 text-accent group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link
+                  href="/viagens/turquia"
+                  className="flex items-center justify-between p-4 bg-white/5 border border-white/10 hover:bg-white/10 transition-colors group"
+                >
+                  <div>
+                    <p className="text-white font-bold text-sm">7 Igrejas da Turquia</p>
+                    <p className="text-white/40 text-xs">Maio 2027 &middot; 8 dias &middot; 35 vagas</p>
+                  </div>
+                  <ArrowRight className="w-4 h-4 text-accent group-hover:translate-x-1 transition-transform" />
+                </Link>
               </div>
 
               <div className="mt-8">
                 <Link
-                  href="/israel"
+                  href="/viagens"
                   className="inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-bold rounded-lg hover:bg-white/90 transition-colors text-base"
                 >
-                  Quero Ir a Israel
+                  Ver Todas as Viagens
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </div>
@@ -560,25 +564,20 @@ export default function Home() {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white font-display">
             Pise Onde Jesus Pisou.
             <br />
-            <span className="italic text-accent">Toque Onde Jesus Tocou.</span>
+            <span className="italic text-accent">Realize Seu Sonho.</span>
           </h2>
           <p className="mt-6 text-white/60 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-            Seja batizado nas mesmas águas do Rio Jordão. Caminhe pela Via
-            Dolorosa. Ore no Muro das Lamentações. Aberto para TODOS —
-            qualquer pessoa, de qualquer igreja.
+            Israel, Egito e Turquia. Pague parcelado e viaje com o
+            Pastor Alexandre. Aberto para TODOS — qualquer pessoa, de
+            qualquer igreja.
           </p>
-
-          <div className="mt-6 flex items-center justify-center gap-3 text-accent">
-            <Users className="w-5 h-5" />
-            <span className="text-lg font-bold">37 vagas restantes</span>
-          </div>
 
           <div className="mt-8">
             <Link
-              href="/israel"
+              href="/viagens"
               className="inline-flex items-center justify-center gap-2 px-10 py-4 bg-white text-black font-bold rounded-lg hover:bg-white/90 transition-colors text-lg"
             >
-              Quero Ir a Israel
+              Ver Todas as Viagens
               <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
