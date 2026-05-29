@@ -468,6 +468,32 @@ export default function IsraelPage() {
         </div>
       </section>
 
+      {/* ==================== TESTEMUNHO VIDEO 1 ==================== */}
+      <section className="bg-black py-10 sm:py-14">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="flex flex-col sm:flex-row items-center gap-8 sm:gap-12">
+            <div className="w-full sm:w-1/3 max-w-[280px] shrink-0">
+              <ScrollVideo
+                src="/videos/Testemunho/testemunho-1.mp4"
+                className="aspect-[9/16] rounded-lg w-full"
+              >
+                {null}
+              </ScrollVideo>
+            </div>
+            <div className="text-center sm:text-left">
+              <p className="text-accent text-[10px] font-semibold tracking-[0.3em] uppercase mb-3">
+                Depoimento Real
+              </p>
+              <p className="text-white/60 text-base sm:text-lg leading-relaxed italic">
+                &ldquo;Ouça quem já pisou na Terra Santa com o Pastor Alexandre.
+                Histórias reais de pessoas que tiveram suas vidas
+                transformadas.&rdquo;
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ==================== CTA BREAK 1 ==================== */}
       <section className="bg-accent py-6 sm:py-8">
         <div className="max-w-4xl mx-auto px-6 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
@@ -569,6 +595,31 @@ export default function IsraelPage() {
         </div>
       </section>
 
+      {/* ==================== TESTEMUNHO VIDEO 2 ==================== */}
+      <section className="bg-warm-50 py-10 sm:py-14">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="flex flex-col sm:flex-row-reverse items-center gap-8 sm:gap-12">
+            <div className="w-full sm:w-1/3 max-w-[280px] shrink-0">
+              <ScrollVideo
+                src="/videos/Testemunho/testemunho-2.mp4"
+                className="aspect-[9/16] rounded-lg w-full"
+              >
+                {null}
+              </ScrollVideo>
+            </div>
+            <div className="text-center sm:text-right">
+              <p className="text-accent text-[10px] font-semibold tracking-[0.3em] uppercase mb-3">
+                Testemunho
+              </p>
+              <p className="text-stone-500 text-base sm:text-lg leading-relaxed italic">
+                &ldquo;Cada viagem é uma experiência completamente nova.
+                O Pastor Alexandre conhece cada pedra, cada história.&rdquo;
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ==================== CTA BREAK 2 ==================== */}
       <section className="bg-black py-10 sm:py-14">
         <div className="max-w-3xl mx-auto px-6 sm:px-8 text-center">
@@ -611,6 +662,7 @@ export default function IsraelPage() {
                 alt="Grupo em Jerusalém com bandeira de Israel"
                 width={1200}
                 height={800}
+                loading="lazy"
                 className="w-full h-full object-cover sm:object-top group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -628,6 +680,7 @@ export default function IsraelPage() {
                 src="/images/israel/jordan-baptism-1.jpg"
                 alt="Batismo no Rio Jordão"
                 fill
+                loading="lazy"
                 className="object-cover sm:object-top group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -639,6 +692,7 @@ export default function IsraelPage() {
                 src="/images/israel/jordan-baptism-2.jpg"
                 alt="Batismo emocional"
                 fill
+                loading="lazy"
                 className="object-cover sm:object-top group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -650,6 +704,7 @@ export default function IsraelPage() {
                 src="/images/israel/galilee-teaching-2.jpg"
                 alt="Pastor Alexandre ensinando na Galileia"
                 fill
+                loading="lazy"
                 className="object-cover sm:object-top group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -661,6 +716,7 @@ export default function IsraelPage() {
                 src="/images/israel/jordan-baptism-3.jpg"
                 alt="Momento de oração no batismo"
                 fill
+                loading="lazy"
                 className="object-cover sm:object-top group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -672,6 +728,7 @@ export default function IsraelPage() {
                 src="/images/israel/jordan-river-group.jpg"
                 alt="Grupo completo no Rio Jordão vestidos de branco"
                 fill
+                loading="lazy"
                 className="object-cover sm:object-top group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -689,6 +746,7 @@ export default function IsraelPage() {
                 src="/images/israel/galilee-teaching-3.jpg"
                 alt="Ensinamento na Galileia"
                 fill
+                loading="lazy"
                 className="object-cover sm:object-top group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -700,6 +758,7 @@ export default function IsraelPage() {
                 src="/images/israel/jordan-baptism-4.jpg"
                 alt="Batismo emocionante"
                 fill
+                loading="lazy"
                 className="object-cover sm:object-top group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -711,6 +770,7 @@ export default function IsraelPage() {
                 src="/images/israel/jerusalem-group-2.jpg"
                 alt="Grupo em Jerusalém"
                 fill
+                loading="lazy"
                 className="object-cover sm:object-top group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -722,6 +782,7 @@ export default function IsraelPage() {
                 src="/images/israel/jordan-baptism-5.jpg"
                 alt="Abraço emocionante após batismo"
                 fill
+                loading="lazy"
                 className="object-cover sm:object-top group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -812,6 +873,31 @@ export default function IsraelPage() {
         </div>
       </section>
 
+      {/* ==================== TESTEMUNHO VIDEO 3 ==================== */}
+      <section className="bg-black py-10 sm:py-14">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="flex flex-col sm:flex-row items-center gap-8 sm:gap-12">
+            <div className="w-full sm:w-1/3 max-w-[280px] shrink-0">
+              <ScrollVideo
+                src="/videos/Testemunho/testemunho-3.mp4"
+                className="aspect-[9/16] rounded-lg w-full"
+              >
+                {null}
+              </ScrollVideo>
+            </div>
+            <div className="text-center sm:text-left">
+              <p className="text-accent text-[10px] font-semibold tracking-[0.3em] uppercase mb-3">
+                Mais Um Testemunho
+              </p>
+              <p className="text-white/60 text-base sm:text-lg leading-relaxed italic">
+                &ldquo;Não precisa ser de nenhuma igreja para viver esta
+                experiência. O convite é para todos.&rdquo;
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ==================== CTA BREAK 3 ==================== */}
       <section className="bg-accent py-6 sm:py-8">
         <div className="max-w-4xl mx-auto px-6 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
@@ -833,68 +919,88 @@ export default function IsraelPage() {
         </div>
       </section>
 
-      {/* ==================== 8. VIDEO TESTIMONIALS ==================== */}
-      <section className="py-20 sm:py-28 bg-black">
+      {/* ==================== 8. WRITTEN TESTIMONIALS ==================== */}
+      <section className="py-16 sm:py-20 bg-cream">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="text-center mb-12 sm:mb-16">
+          <div className="text-center mb-10">
             <p className="text-accent text-[10px] sm:text-xs font-semibold tracking-[0.3em] uppercase mb-3">
-              Depoimentos Reais
+              O Que Dizem
             </p>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white font-display">
-              Vidas <span className="italic text-accent">Transformadas</span>
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-primary font-display">
+              Quem já foi, <span className="italic">recomenda</span>
             </h2>
-            <p className="mt-4 text-white/50 text-base sm:text-lg max-w-2xl mx-auto">
-              Ouça de quem já pisou na Terra Santa com o Pastor Alexandre.
-              Histórias reais. Emoções reais. Vidas que nunca mais foram as mesmas.
-            </p>
           </div>
-
-          {/* Video testimonials — horizontal scroll */}
-          <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide" style={{ WebkitOverflowScrolling: "touch" }}>
-            {[
-              { src: "/videos/Testemunho/testemunho-1.mp4", label: "Testemunho 1" },
-              { src: "/videos/Testemunho/testemunho-2.mp4", label: "Testemunho 2" },
-              { src: "/videos/Testemunho/testemunho-3.mp4", label: "Testemunho 3" },
-              { src: "/videos/Testemunho/testemunho-4.mp4", label: "Testemunho 4" },
-              { src: "/videos/Testemunho/testemunho-5.mp4", label: "Testemunho 5" },
-            ].map((video) => (
-              <div
-                key={video.src}
-                className="shrink-0 w-[280px] sm:w-[320px] snap-start"
-              >
-                <ScrollVideo
-                  src={video.src}
-                  className="aspect-[9/16] rounded-lg w-full"
-                >
-                  {null}
-                </ScrollVideo>
-              </div>
-            ))}
-          </div>
-
-          {/* Written testimonials below */}
-          <div className="grid md:grid-cols-2 gap-6 sm:gap-8 mt-16">
-            {testimonials.map((testimonial) => (
+          <div className="grid md:grid-cols-2 gap-6">
+            {testimonials.slice(0, 2).map((testimonial) => (
               <div
                 key={testimonial.name}
-                className="bg-white/5 border border-white/10 p-6 sm:p-8"
+                className="bg-white border border-stone-100 p-6 sm:p-8"
               >
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="w-4 h-4 text-accent fill-accent"
-                    />
+                    <Star key={i} className="w-4 h-4 text-accent fill-accent" />
                   ))}
                 </div>
-                <p className="text-white/70 text-sm sm:text-base leading-relaxed italic">
+                <p className="text-stone-700 text-sm sm:text-base leading-relaxed italic">
                   &ldquo;{testimonial.text}&rdquo;
                 </p>
-                <div className="mt-6 pt-4 border-t border-white/10">
-                  <p className="font-bold text-white text-sm">
-                    {testimonial.name}
-                  </p>
-                  <p className="text-white/40 text-xs">{testimonial.trip}</p>
+                <div className="mt-6 pt-4 border-t border-stone-100">
+                  <p className="font-bold text-primary text-sm">{testimonial.name}</p>
+                  <p className="text-stone-500 text-xs">{testimonial.trip}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ==================== TESTEMUNHOS VIDEOS 4 & 5 ==================== */}
+      <section className="bg-black py-10 sm:py-14">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="text-center mb-8">
+            <p className="text-accent text-[10px] font-semibold tracking-[0.3em] uppercase">
+              Ainda não está convencido?
+            </p>
+            <p className="text-white/50 text-sm mt-2">
+              Ouça mais pessoas que já viveram esta experiência
+            </p>
+          </div>
+          <div className="flex gap-4 justify-center overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide" style={{ WebkitOverflowScrolling: "touch" }}>
+            <div className="shrink-0 w-[250px] sm:w-[280px] snap-start">
+              <ScrollVideo
+                src="/videos/Testemunho/testemunho-4.mp4"
+                className="aspect-[9/16] rounded-lg w-full"
+              >
+                {null}
+              </ScrollVideo>
+            </div>
+            <div className="shrink-0 w-[250px] sm:w-[280px] snap-start">
+              <ScrollVideo
+                src="/videos/Testemunho/testemunho-5.mp4"
+                className="aspect-[9/16] rounded-lg w-full"
+              >
+                {null}
+              </ScrollVideo>
+            </div>
+          </div>
+          {/* Remaining written testimonials */}
+          <div className="grid md:grid-cols-2 gap-6 mt-10">
+            {testimonials.slice(2).map((testimonial) => (
+              <div
+                key={testimonial.name}
+                className="bg-white/5 border border-white/10 p-6"
+              >
+                <div className="flex gap-1 mb-3">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-3 h-3 text-accent fill-accent" />
+                  ))}
+                </div>
+                <p className="text-white/60 text-sm leading-relaxed italic">
+                  &ldquo;{testimonial.text}&rdquo;
+                </p>
+                <div className="mt-4 pt-3 border-t border-white/10">
+                  <p className="font-bold text-white text-xs">{testimonial.name}</p>
+                  <p className="text-white/30 text-xs">{testimonial.trip}</p>
                 </div>
               </div>
             ))}
