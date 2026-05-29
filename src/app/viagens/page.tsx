@@ -139,15 +139,19 @@ export default function ViagensPage() {
         <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-32 sm:py-40 w-full">
           <div className="max-w-3xl">
             <p className="text-accent text-[10px] sm:text-xs font-semibold tracking-[0.3em] uppercase mb-6">
-              Israel &middot; Egito &middot; Turquia
+              O Maior Guia Brasileiro de Israel
             </p>
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold leading-[0.95] tracking-tight text-white font-display">
               Viagens com
               <br />
               Pastor <span className="text-accent italic">Alexandre</span>
             </h1>
-            <p className="mt-8 text-lg sm:text-xl text-white/60 max-w-lg leading-relaxed">
-              Pague parcelado e realize seu sonho
+            <div className="w-16 h-px bg-accent mt-6 mb-6" />
+            <p className="text-base sm:text-lg text-white/60 max-w-lg leading-relaxed">
+              Israel &middot; Egito &middot; Turquia — Pague parcelado em até 12x e realize seu sonho de pisar na Terra Santa.
+            </p>
+            <p className="mt-3 text-white/40 text-sm">
+              25+ anos de experiência &middot; 50+ viagens &middot; Milhares de vidas transformadas
             </p>
             <div className="mt-10">
               <Link

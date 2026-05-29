@@ -135,7 +135,7 @@ const faqs = [
   {
     question: "Quanto custa a viagem?",
     answer:
-      "O valor varia conforme a época e duração, mas inclui tudo: passagem aérea, hotéis de qualidade, todas as refeições, transporte, entradas em todos os locais e guia profissional. Oferecemos facilidades de pagamento. Entre em contato para valores atualizados.",
+      "O valor varia conforme a época e duração, mas inclui tudo: passagem aérea, hospedagem em hotéis de alto padrão (Dan Jerusalem em Jerusalém e Sofia Hotel na Galileia), todas as refeições, transporte em ônibus climatizado, entradas em todos os locais e guia profissional. Oferecemos pagamento parcelado em até 12x. Entre em contato para valores atualizados.",
   },
   {
     question: "É seguro viajar para Israel?",
@@ -252,7 +252,7 @@ export default function IsraelPage() {
               <div>
                 <div className="w-10 h-px bg-accent mb-6" />
                 <p className="text-accent text-[10px] sm:text-xs font-semibold tracking-[0.3em] uppercase mb-3">
-                  Pastor Alexandre Mendes
+                  O Maior Guia Brasileiro de Israel
                 </p>
                 <h1 className="text-3xl sm:text-5xl lg:text-7xl font-bold leading-[0.95] tracking-tight text-white font-display">
                   Pise Onde
